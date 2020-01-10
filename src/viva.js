@@ -133,6 +133,7 @@ module.exports = async (robot) => {
   robot.respond(/(@?(.+) хочет отгул)\s*/i, require('./routes/time-off/userWantsTimeOff'))
   robot.respond(/(с отработкой)|(за свой счет)|(в счет отпуска)\s*/i, require('./routes/time-off/timeOffType'))
   robot.respond(/(отгул не нужен)\s*/i, require('./routes/time-off/timeOffIsNotNeeded'))
+  robot.respond(/отчет отпусков @?(.+)\s*/i, require('./routes/listForSpecifiedUser'))
   /**
    * Overwrites vacation dates.
    *
